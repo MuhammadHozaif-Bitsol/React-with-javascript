@@ -1,9 +1,14 @@
-import React from 'react'
-
+import React from "react";
+import "./App.css";
+import ReactIntro from "./Components/ReactIntro";
+import Page from "./Page";
 function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      <ReactIntro></ReactIntro>
+      <Page></Page>
+    </>
+  );
 }
 
-export default App
+export default App;
