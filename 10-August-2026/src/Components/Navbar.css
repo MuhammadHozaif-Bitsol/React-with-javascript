@@ -1,0 +1,7 @@
+.nav-list {
+  width: 400px;
+  list-style-type: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
