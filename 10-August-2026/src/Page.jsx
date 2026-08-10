@@ -1,9 +1,9 @@
 import React from "react";
-import reactLogo from "./assets/react.svg";
+import Image from "./Components/Image";
 function Page() {
   return (
     <>
-      <img src={reactLogo} alt="React LOGO" width="40px" />
+      <Image></Image>
       <h1>Reasons why i am interested in learning react</h1>
       <ol>
         <li> React is a popular library</li>

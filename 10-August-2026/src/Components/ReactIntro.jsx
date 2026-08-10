@@ -1,10 +1,9 @@
 import React from "react";
-import reactLogo from "../assets/react.svg";
-
+import Image from "./Image";
 function ReactIntro() {
   return (
     <>
-      <img src={reactLogo} width="40px" alt="React logo" />
+      <Image></Image>
       <h1>Fun Facts about React</h1>
       <ul>
         <li>Was first release in 2013</li>
