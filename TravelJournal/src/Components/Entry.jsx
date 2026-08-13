@@ -1,6 +1,7 @@
 import React from "react";
 import marker from "../assets/marker.png";
 export default function Entry(props) {
+  console.log(props);
   return (
     <article className="journal-entry">
       <div className="main-image-container">

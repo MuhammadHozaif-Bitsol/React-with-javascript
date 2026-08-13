@@ -14,6 +14,7 @@ export default function App() {
         {entryData.map((data) => {
           return (
             <Entry
+              key={data.id}
               img={{ src: data.img.src, alt: data.img.alt }}
               title={data.title}
               country={data.country}
