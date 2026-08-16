@@ -1,4 +1,5 @@
 import Die from "./components/Die";
+import { nanoid } from "nanoid";
 import "./App.css";
 import { useState } from "react";
 export default function App() {
@@ -6,7 +7,11 @@ export default function App() {
   function generateAllNewDice() {
     let dieNumbers = [];
     for (let i = 0; i < 10; i++) {
-      dieNumbers.push(Math.floor(Math.random() * 6 + 1));
+      dieNumbers.push({
+        value: Math.floor(Math.random() * 6 + 1),
+        isHeld: false,
+        id: nanoid(),
+      });
     }
     return dieNumbers;
   }
@@ -16,13 +21,13 @@ export default function App() {
   return (
     <main>
       <div className="dice-container">
-        {dieValues.map((val, index) => (
-          <Die key={index} value={val} />
+        {dieValues.map((dieobj, index) => (
+          <Die key={dieobj.id} value={dieobj.value} />
         ))}
-        <button className="roll-dice" onClick={rollDice()}>
-          Roll
-        </button>
       </div>
+      <button className="roll-dice" onClick={rollDice}>
+        Roll
+      </button>
     </main>
   );
 }
