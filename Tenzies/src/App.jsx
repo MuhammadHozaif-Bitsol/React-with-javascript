@@ -18,11 +18,20 @@ export default function App() {
   function rollDice() {
     setDieValues(generateAllNewDice);
   }
+  function hold(id) {
+    console.log(id);
+  }
+
   return (
     <main>
       <div className="dice-container">
         {dieValues.map((dieobj, index) => (
-          <Die key={dieobj.id} value={dieobj.value} />
+          <Die
+            key={dieobj.id}
+            value={dieobj.value}
+            isHeld={dieobj.isHeld}
+            hold={() => hold(dieobj.id)}
+          />
         ))}
       </div>
       <button className="roll-dice" onClick={rollDice}>

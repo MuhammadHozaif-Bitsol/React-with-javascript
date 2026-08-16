@@ -1,4 +1,11 @@
 import React from "react";
 export default function Die(props) {
-  return <button>{props.value}</button>;
+  const styles = {
+    backgroundColor: props.isHeld ? "green" : "white",
+  };
+  return (
+    <button onClick={props.hold} style={styles}>
+      {props.value}
+    </button>
+  );
 }
